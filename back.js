@@ -22,12 +22,11 @@ function inputbutton() {
     } else {
         let newcheckbox = document.createElement("input");
         newcheckbox.type = "checkbox";
-        newcheckbox.appendChild("divinput");
+        divinput.appendChild(newcheckbox);
         let newp = document.createElement("p");
         newp.innerText = textvalue.value;
-        newp.after("divinput");
+        newcheckbox.after(newp);
         textvalue.value = "";
-
 
     };
 
