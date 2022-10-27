@@ -13,6 +13,8 @@ for (let i = 0; i <= 2; i++) {
 } */
 
 let Lista = {};
+
+
 let textvalue = document.getElementById("newtext");
 let divinput = document.getElementById("divinput");
 let eraserbotton = document.getElementById("eraser");
@@ -23,12 +25,15 @@ function inputbutton() {
     if (textvalue.value == false) {
         alert("Tarea Vacia");
     } else {
+        let divfather = document.createelement("div");
+        divfather.id = "divfather";
+        divinput.appendChild(divfather);
         let newcheckbox = document.createElement("input");
         newcheckbox.type = "checkbox";
-        divinput.appendChild(newcheckbox);
+        divfather.appendChild(newcheckbox);
         let newp = document.createElement("p");
         newp.innerText = textvalue.value;
-        newcheckbox.after(newp);
+        newcheckbox.appendChild(newp);
         textvalue.value = "";
         let neweraser = document.createElement("button");
         neweraser.id = "eraser";
