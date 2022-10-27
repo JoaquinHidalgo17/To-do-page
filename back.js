@@ -18,8 +18,13 @@ let Lista = {};
 let textvalue = document.getElementById("newtext");
 let divinput = document.getElementById("divinput");
 let eraserbotton = document.getElementById("eraser");
-eraserbotton.addEventListener("click", getValueInput);
+eraserbotton.addEventListener("click", eraser());
 
+function eraser() {
+    var div = this.parentElement;
+    div.style.display = "none";
+
+}
 
 function inputbutton() {
     if (textvalue.value == false) {
@@ -37,7 +42,7 @@ function inputbutton() {
         textvalue.value = "";
         let neweraser = document.createElement("button");
         neweraser.id = "eraser";
-        newp.appendChild(neweraser);
+        divfather.appendChild(neweraser);
 
 
     };
