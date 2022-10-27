@@ -15,6 +15,9 @@ for (let i = 0; i <= 2; i++) {
 let Lista = {};
 let textvalue = document.getElementById("newtext");
 let divinput = document.getElementById("divinput");
+let eraserbotton = document.getElementById("eraser");
+eraserbotton.addEventListener("click", getValueInput);
+
 
 function inputbutton() {
     if (textvalue.value == false) {
@@ -27,6 +30,10 @@ function inputbutton() {
         newp.innerText = textvalue.value;
         newcheckbox.after(newp);
         textvalue.value = "";
+        let neweraser = document.createElement("button");
+        neweraser.id = "eraser";
+        newp.appendChild(neweraser);
+
 
     };
 
