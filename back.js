@@ -17,38 +17,47 @@ let Lista = {};
 
 let textvalue = document.getElementById("newtext");
 let divinput = document.getElementById("divinput");
-let eraserbotton = document.getElementById("eraser");
-eraserbotton.addEventListener("click", eraser());
 
-function eraser() {
-    var div = this.parentElement;
-    div.style.display = "none";
-
-}
 
 function inputbutton() {
     if (textvalue.value == false) {
         alert("Tarea Vacia");
     } else {
-        let divfather = document.createelement("div");
-        divfather.id = "divfather";
+        let divfather = document.createElement("div");
+        divfather.setAttribute("id", "divfather");
         divinput.appendChild(divfather);
+
         let newcheckbox = document.createElement("input");
         newcheckbox.type = "checkbox";
         divfather.appendChild(newcheckbox);
+
         let newp = document.createElement("p");
         newp.innerText = textvalue.value;
-        newcheckbox.appendChild(newp);
+        divfather.appendChild(newp);
         textvalue.value = "";
+
         let neweraser = document.createElement("button");
-        neweraser.id = "eraser";
+        neweraser.setAttribute("id", "eraser");
         divfather.appendChild(neweraser);
+        neweraser.textContent = "X";
+        neweraser.onclick = function eraser() {
+            let div = this.parentElement;
+            div.style.display = "none";
 
-
+        };
     };
 
 };
 
-function erasetext() {
+/* let eraserbotton = document.getElementById("eraser");
+eraserbotton.addEventListener("click", eraser); */
+
+/* function eraser() {
+    let div = this.parentElement;
+    div.remove();
+
+}; */
+
+function cleartext() {
     textvalue.value = "";
 }
