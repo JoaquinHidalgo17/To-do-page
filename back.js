@@ -13,25 +13,51 @@ for (let i = 0; i <= 2; i++) {
 } */
 
 let Lista = {};
+
+
 let textvalue = document.getElementById("newtext");
 let divinput = document.getElementById("divinput");
+
 
 function inputbutton() {
     if (textvalue.value == false) {
         alert("Tarea Vacia");
     } else {
+        let divfather = document.createElement("div");
+        divfather.setAttribute("id", "divfather");
+        divinput.appendChild(divfather);
+
         let newcheckbox = document.createElement("input");
         newcheckbox.type = "checkbox";
-        divinput.appendChild(newcheckbox);
+        divfather.appendChild(newcheckbox);
+
         let newp = document.createElement("p");
         newp.innerText = textvalue.value;
-        newcheckbox.after(newp);
+        divfather.appendChild(newp);
         textvalue.value = "";
 
+        let neweraser = document.createElement("button");
+        neweraser.setAttribute("id", "eraser");
+        divfather.appendChild(neweraser);
+        neweraser.textContent = "X";
+        neweraser.onclick = function eraser() {
+            let div = this.parentElement;
+            div.style.display = "none";
+
+        };
     };
 
 };
 
-function erasetext() {
+/* let eraserbotton = document.getElementById("eraser");
+eraserbotton.addEventListener("click", eraser); */
+
+/* function eraser() {
+    let div = this.parentElement;
+    div.remove();
+
+}; */
+
+function cleartext() {
     textvalue.value = "";
 }
