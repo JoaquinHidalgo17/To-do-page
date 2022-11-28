@@ -19,7 +19,7 @@ let textValue = document.getElementById("newtext");
 let divInput = document.getElementById("divinput");
 
 
-function inputbutton() {
+function onTaskCreate() {
     if (textValue.value == false) {
         alert("Tarea Vacia");
     } else {
