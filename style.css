@@ -1,0 +1,17 @@
+.title {
+    border: 0px;
+    background-color: azure;
+    color: rebeccapurple;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+}
+
+;
+::placeholder {
+    opacity: 100%;
+}
+
+;
+.title.capitalize {
+    text-transform: capitalize;
+}
