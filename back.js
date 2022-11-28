@@ -12,15 +12,15 @@ for (let i = 0; i <= 2; i++) {
     listatareas.appendChild(tarea);
 } */
 
-let Lista = {};
+let lista = {};
 
 
-let textvalue = document.getElementById("newtext");
+let textValue = document.getElementById("newtext");
 let divinput = document.getElementById("divinput");
 
 
 function inputbutton() {
-    if (textvalue.value == false) {
+    if (textValue.value == false) {
         alert("Tarea Vacia");
     } else {
         let divfather = document.createElement("div");
@@ -32,10 +32,10 @@ function inputbutton() {
         divfather.appendChild(newcheckbox);
 
         let newp = document.createElement("p");
-        newp.innerText = textvalue.value;
+        newp.innerText = textValue.value;
         newp.setAttribute("class", "taskelement");
         divfather.appendChild(newp);
-        textvalue.value = "";
+        textValue.value = "";
 
         let neweraser = document.createElement("button");
         neweraser.setAttribute("id", "eraser");
@@ -60,5 +60,5 @@ eraserbotton.addEventListener("click", eraser); */
 }; */
 
 function cleartext() {
-    textvalue.value = "";
+    textValue.value = "";
 }
