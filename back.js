@@ -16,7 +16,7 @@ let lista = {};
 
 
 let textValue = document.getElementById("newtext");
-let divinput = document.getElementById("divinput");
+let divInput = document.getElementById("divinput");
 
 
 function inputbutton() {
@@ -25,7 +25,7 @@ function inputbutton() {
     } else {
         let divfather = document.createElement("div");
         divfather.setAttribute("id", "divfather");
-        divinput.appendChild(divfather);
+        divInput.appendChild(divfather);
 
         let newcheckbox = document.createElement("input");
         newcheckbox.type = "checkbox";
