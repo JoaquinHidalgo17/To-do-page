@@ -33,6 +33,7 @@ function inputbutton() {
 
         let newp = document.createElement("p");
         newp.innerText = textvalue.value;
+        newp.setAttribute("class", "taskelement");
         divfather.appendChild(newp);
         textvalue.value = "";
 
