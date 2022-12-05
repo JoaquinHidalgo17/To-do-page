@@ -1,23 +1,11 @@
-/* let actividades = [
-    { actividad: "lavar" },
-    { actividad: "barrer" },
-    { actividad: "comprar" }
-];
-
-let listatareas = document.getElementById("listatareas");
-
-for (let i = 0; i <= 2; i++) {
-    let tarea = document.createElement("li");
-    tarea.innerText = actividades[i].actividad;
-    listatareas.appendChild(tarea);
-} */
 let maxId = 0
 function createClaim(title){
     maxId++ ;
  let newClaim = {id: maxId ,title: title , note: "" } ;
  lista.push(newClaim);
 };
-function deleteClaim(){};
+function deleteClaim(id){
+ 
 
 function updateClaim(id, title, note){
 
@@ -30,6 +18,7 @@ let lista = [
         
     }
 ];
+
 
 
 let textValue = document.getElementById("newtext");
