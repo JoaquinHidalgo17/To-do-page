@@ -1,15 +1,23 @@
-let maxId = 0
+let findClaimIdIndex = lista.findIndex((idClaim => idClaim.id === id));
+
 function createClaim(title){
     maxId++ ;
  let newClaim = {id: maxId ,title: title , note: "" } ;
  lista.push(newClaim);
 };
+
 function deleteClaim(id){
- 
-
-function updateClaim(id, title, note){
-
-}
+    if (findClaimIdIndex > -1){
+        lista.splice(findClaimIdIndex, 1);
+    }
+    return lista;
+    };
+    
+function updateClaim(id, newTitle, newNote){
+    lista[findClaimIdIndex].title = newTitle ;
+    lista[findClaimIdIndex].note = newNote ;
+    
+    };
 let lista = [
     {
         id: 0,
