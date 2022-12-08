@@ -1,5 +1,7 @@
 let findClaimIdIndex = lista.findIndex((idClaim => idClaim.id === id));
 
+let maxId = 0 ;
+
 function createClaim(title){
     maxId++ ;
  let newClaim = {id: maxId ,title: title , note: "" } ;
