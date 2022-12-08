@@ -1,40 +1,49 @@
-/* let actividades = [
-    { actividad: "lavar" },
-    { actividad: "barrer" },
-    { actividad: "comprar" }
+let maxId = 0
+function createClaim(title){
+    maxId++ ;
+ let newClaim = {id: maxId ,title: title , note: "" } ;
+ lista.push(newClaim);
+};
+function deleteClaim(id){
+ 
+
+function updateClaim(id, title, note){
+
+}
+let lista = [
+    {
+        id: 0,
+        title: "Tarea 1", 
+        note: "notas de la tarea",
+        
+    }
 ];
 
-let listatareas = document.getElementById("listatareas");
-
-for (let i = 0; i <= 2; i++) {
-    let tarea = document.createElement("li");
-    tarea.innerText = actividades[i].actividad;
-    listatareas.appendChild(tarea);
-} */
-
-let Lista = {};
 
 
-let textvalue = document.getElementById("newtext");
-let divinput = document.getElementById("divinput");
+let textValue = document.getElementById("newtext");
+let divInput = document.getElementById("divinput");
 
 
-function inputbutton() {
-    if (textvalue.value == false) {
+function onTaskCreate() {
+    createClaim(textValue.value);
+    console.log(lista)
+    if (textValue.value == false) {
         alert("Tarea Vacia");
     } else {
         let divfather = document.createElement("div");
         divfather.setAttribute("id", "divfather");
-        divinput.appendChild(divfather);
+        divInput.appendChild(divfather);
 
         let newcheckbox = document.createElement("input");
         newcheckbox.type = "checkbox";
         divfather.appendChild(newcheckbox);
 
         let newp = document.createElement("p");
-        newp.innerText = textvalue.value;
+        newp.innerText = textValue.value;
+        newp.setAttribute("class", "taskelement");
         divfather.appendChild(newp);
-        textvalue.value = "";
+        textValue.value = "";
 
         let neweraser = document.createElement("button");
         neweraser.setAttribute("id", "eraser");
@@ -59,5 +68,5 @@ eraserbotton.addEventListener("click", eraser); */
 }; */
 
 function cleartext() {
-    textvalue.value = "";
+    textValue.value = "";
 }

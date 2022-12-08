@@ -5,20 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>To-do-List</title>
+    <title>To-do List</title>
 </head>
 
 <body>
-    <input type="text" placeholder="List" id="title" class="title">
-    <div>
-        <div id="divinput">
+    <div class="container">
+        <div class="flagcontainer">1
+                
+            <div class="pole"></div>
+            <div class="smallflag flag"></div>
+            <div class="bigflag flag ">
+                <input type=" text" placeholder="To-do List" id="title" class="title"></div>
+                
         </div>
-        <input type="text" id="newtext" value="">
-        <button type="button" onclick="inputbutton()" id="newtext">Add</button><button type="button" id="clear" onclick="cleartext()">clear</button>
+        <div class="taskcontainer">
+          <div id="divinput">
+            <input type="text" id="newtext" value=" ">
+            <button type="button" onclick="onTaskCreate()" id="newtext">Add</button><button type="button" id="clear" onclick="cleartext()">clear</button>
+          </div>
+        </div>
+        <div class="chosedtaskcontainer">3
+            <div id="backpaper1"></div>
+            <div id="backpaper2"></div>
+            <div id="backpaper3"></div>
+            <div id="backpaper4"></div>
+            <div id="backpaper5"></div>
+            <div id="backpaper6"></div>
+            <div id="chosedpaper">
+                <div id="headerdetails"></div>
+                <div id="chosedtask"></div>
+                <div id="date"></div>
+                <div id="backgroundimage"></div>
+                <div id="boxnotes"></div>
+                <div id="resign"></div>
+                <div id="claim"></div>
+            </div>
+        </div>
+        </div>
+
+        
     </div>
 
-    <!-- <ol id="listatareas"></ol> -->
-    <script src="./back.js"></script>
+    <!-- <ol id="listatareas "></ol> -->
+    <script src="./back.js "></script>
 </body>
 
 </html>
